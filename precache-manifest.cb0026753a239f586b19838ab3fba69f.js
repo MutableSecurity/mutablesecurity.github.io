@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "9ebd0185d05b3ad57611",
-    "url": "/css/app.3cd1dd8a.css"
+    "revision": "057fcca94bca52486abc",
+    "url": "/css/app.e14189bd.css"
   },
   {
-    "revision": "9ebd0185d05b3ad57611",
+    "revision": "057fcca94bca52486abc",
     "url": "/js/app.40949d74.js"
   },
   {
@@ -20,24 +20,24 @@ self.__precacheManifest = [
     "url": "/fonts/nucleo-icons.42643978.woff2"
   },
   {
-    "revision": "2569aaea6eaaf8cd210db7f2fa016743",
-    "url": "/fonts/nucleo-icons.2569aaea.woff"
-  },
-  {
     "revision": "f82ec6ba2dc4181db2af35c499462840",
     "url": "/fonts/nucleo-icons.f82ec6ba.ttf"
+  },
+  {
+    "revision": "2569aaea6eaaf8cd210db7f2fa016743",
+    "url": "/fonts/nucleo-icons.2569aaea.woff"
   },
   {
     "revision": "0b8a30b10cbe7708d5f3a4b007c1d665",
     "url": "/img/nucleo-icons.0b8a30b1.svg"
   },
   {
-    "revision": "674f50d287a8c48dc19ba404d20fe713",
-    "url": "/fonts/fontawesome-webfont.674f50d2.eot"
-  },
-  {
     "revision": "af7ae505a9eed503f8b8e6982036873e",
     "url": "/fonts/fontawesome-webfont.af7ae505.woff2"
+  },
+  {
+    "revision": "674f50d287a8c48dc19ba404d20fe713",
+    "url": "/fonts/fontawesome-webfont.674f50d2.eot"
   },
   {
     "revision": "fee66e712a8a08eef5805a46892932ad",
@@ -52,7 +52,7 @@ self.__precacheManifest = [
     "url": "/img/fontawesome-webfont.912ec66d.svg"
   },
   {
-    "revision": "cf1ab2db185b60d0a37c12a56326f2e7",
+    "revision": "4a80b78f667177f216ba10cb9438f656",
     "url": "/index.html"
   },
   {
