@@ -238,7 +238,7 @@
 
         @media (max-width: map-get($breakpoints, md)) {
             width: 100%;
-            top: calc(100% - 100px);
+            top: calc(100% - 50px);
         }
     }
 }
