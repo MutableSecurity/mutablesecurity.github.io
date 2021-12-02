@@ -1,0 +1,258 @@
+/* Page container */
+
+.landing {
+    width: 100%;
+    height: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    /* Brand's logo, motto and description container*/
+
+    .brand-description {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: calc(100% - 200px);
+        transition: width 1s;
+
+        /* Particles */
+        .tsparticles-canvas-el {
+            background-color: $baby-powder !important;
+            transition: background-color 1s;
+        }
+
+        /* Logo composed of an image and its text */
+
+        .logo {
+            height: 100px;
+        }
+
+        .logo img {
+            height: 100px;
+        }
+
+        .logo b {
+            font-size: var(--huge-text);
+            font-family: 'Roboto Slab', serif;
+            vertical-align: bottom;
+            color: $primary-color;
+        }
+
+        /* Motto */
+
+        .motto {
+            font-size: var(--large-text);
+            color: $primary-color-dark;
+        }
+
+        /* Text */
+        p {
+            color: $rich-black;
+            font-weight: 400;
+
+            @media screen and (max-width: map-get($breakpoints, xs)) {
+                font-size: 0.8rem;
+            }
+        }
+
+        /* Product description */
+
+        .description {
+            width: 500px;
+            margin-left: calc(50% - 250px);
+
+            .form-inline {
+                display: block !important;
+                margin-top: 30px;
+
+                * {
+                    display: inline-block !important;
+                }
+
+                input {
+                    width: calc(100% - 220px);
+                    margin-right: 20px;
+
+                    @media (max-width: 300px) {
+                        width: 100%;
+                    }
+                }
+
+                button {
+                    width: 200px;
+                }
+            }
+
+            @media (max-width: map-get($breakpoints, xs)) {
+                width: 100%;
+                padding: 0 20px;
+                margin-left: 0;
+            }
+        }
+
+        &.demo-running {
+            background-color: $white;
+
+            .tsparticles-canvas-el {
+                background-color: $white !important;
+            }
+
+            @media (min-width: map-get($breakpoints, md)) {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: map-get($breakpoints, md)) {
+            width: 100%;
+        }
+    }
+
+    /* Demo panel */
+
+    .demo {
+        position: absolute;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 200px;
+        background-color: $white;
+        transition: width 1s, background-color 1s;
+
+        .demo-container {
+            /* Button for starting the demo */
+
+            .goto-demo {
+                display: inherit !important;
+                visibility: visible;
+                height: 70px;
+                width: 250px;
+                transform: translateX(-150px);
+                background-color: $languid-lavender;
+                color: $primary-color;
+                border: none;
+
+                @media (max-width: map-get($breakpoints, md)) {
+                    transform: translateY(-50vh);
+                    margin-left: calc(50% - 150px);
+                }
+            }
+        }
+
+        .custom-slider-container {
+            * {
+                display: none;
+            }
+
+            &.demo-loading-finished {
+                * {
+                    display: block;
+                }
+            }
+
+            /* Slider */
+            .slider-container {
+                height: 500px;
+                width: calc(100% - 50px);
+                margin-left: 50px;
+            }
+
+            .slider-item {
+                height: 500px;
+                display: block;
+                font-size: var(--normal-text);
+                color: $languid-lavender;
+                transform: scale(0.8);
+                transition-timing-function: ease;
+                transition-duration: 300ms;
+
+                h3 {
+                    text-align: left;
+                    color: $primary-color;
+
+                    wbr {
+                        display: none;
+
+                        @media (max-width: map-get($breakpoints, sm)) {
+                            display: block;
+                        }
+                    }
+                }
+
+                p {
+                    margin-top: 20px;
+                    color: $rich-black;
+                    white-space: initial;
+                    text-align: justify;
+                    font-size: var(--normal-text);
+
+                    * {
+                        display: inline;
+                    }
+                }
+            }
+
+            .swiper-container-vertical .slider-pagination {
+                display: none !important;
+            }
+
+            .navigation-icons {
+                position: absolute;
+
+                i {
+                    display: block;
+                    width: 50px;
+                    margin: 20px 10px;
+                    font-size: var(--large-text);
+                    text-align: center;
+                    color: $red;
+                    cursor: pointer;
+
+                    &.slider-controller {
+                        margin: 50px 10px;
+                        color: $primary-color;
+                    }
+
+                    &.completed {
+                        color: $green;
+                        animation: complete-demo-task 3s forwards !important;
+                    }
+                }
+            }
+        }
+
+        &.demo-running {
+            background-color: $baby-powder;
+
+            @media (min-width: map-get($breakpoints, md)) {
+                width: 50%;
+            }
+        }
+
+        @media (max-width: 300px) {
+            width: 100%;
+            top: 100% !important;
+        }
+
+        @media (max-width: map-get($breakpoints, md)) {
+            width: 100%;
+            top: calc(100% - 100px);
+        }
+    }
+}
+
+/* Animations */
+
+@keyframes complete-demo-task {
+    0% {
+        color: $red;
+    }
+    50% {
+        color: $yellow;
+    }
+    100% {
+        color: $green;
+    }
+}
