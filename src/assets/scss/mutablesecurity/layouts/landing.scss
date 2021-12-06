@@ -72,9 +72,18 @@
                     display: inline-block !important;
                 }
 
-                input {
+                .input-with-feedback {
                     width: calc(100% - 220px);
                     margin-right: 20px;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    div {
+                        width: 100%;
+                        text-align: left;
+                    }
 
                     @media (max-width: 300px) {
                         width: 100%;
@@ -83,6 +92,7 @@
 
                 button {
                     width: 200px;
+                    vertical-align: top;
                 }
             }
 

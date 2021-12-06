@@ -91,15 +91,35 @@
                         mijlocii să își îmbunătățească postura de securitate.
                     </p>
                     <form class="form-inline">
-                        <input
-                            type="email"
-                            class="form-control"
-                            placeholder="Adresa ta de email"
-                            v-model="email"
-                        />
+                        <div class="input-with-feedback">
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="Adresa ta de email"
+                                v-model="email.address"
+                                :disabled="email.isValid == 'valid'"
+                                v-bind:class="{
+                                    'is-invalid': email.isValid == 'invalid',
+                                    'is-valid': email.isValid == 'valid',
+                                }"
+                            />
+                            <div
+                                class="valid-feedback"
+                                v-if="email.isValid == 'valid'"
+                            >
+                                Mulțumim!
+                            </div>
+                            <div
+                                class="invalid-feedback"
+                                v-if="email.isValid == 'invalid'"
+                            >
+                                Adresa de email nu este corectă.
+                            </div>
+                        </div>
                         <button
                             type="button"
                             class="btn btn-default"
+                            :disabled="email.isValid == 'valid'"
                             @click="sendEmail"
                         >
                             Află când lansăm!
@@ -327,10 +347,26 @@ export default {
             }
         },
         sendEmail() {
-            const body = { email: this.email };
+            const email = this.email.address;
 
+            // Validate the email
+            var sanitized_email = String(email)
+                .toLowerCase()
+                .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+            if (sanitized_email) {
+                this.email.isValid = 'valid';
+            } else {
+                this.email.isValid = 'invalid';
+
+                return;
+            }
+
+            // If the email is valid, add it into the database
+            const body = { email: email };
             fetch(
-                'https://europe-central2-mutablesecurity.cloudfunctions.net/enter_waiting_list',
+                'https://europe-central2-mutablesecurity.cloudfunctions.net/add_to_waiting_list',
                 {
                     method: 'POST',
                     headers: {
@@ -379,7 +415,10 @@ export default {
                 loopedSlides: 2,
                 slidesToScroll: 1,
             },
-            email: '',
+            email: {
+                address: '',
+                isValid: null,
+            },
             scssVariables: scssVariables,
         };
     },
