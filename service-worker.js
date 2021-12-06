@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.ba668b4bd3bbf26a4784a73bab8367b8.js"
+  "/precache-manifest.742aa54c740c219fe06a578f7375d782.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "mutable-security"});
