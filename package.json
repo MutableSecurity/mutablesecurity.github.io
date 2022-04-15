@@ -1,38 +1,55 @@
 {
-  "name": "mutable-security",
-  "homepage": "https://www.mutablesecurity.ro",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
-  },
-  "dependencies": {
-    "bootstrap-vue": "^2.0.4",
-    "flatpickr": "^4.5.1",
-    "nouislider": "^11.1.0",
-    "particles.vue": "^2.20.5",
-    "register-service-worker": "^1.5.2",
-    "swiper": "^6.0.2",
-    "vue": "^2.6.6",
-    "vue-concise-slider": "^4.2.3",
-    "vue-flatpickr-component": "^8.1.1",
-    "vue-lazyload": "^1.2.6",
-    "vue-router": "^3.0.2",
-    "vue-scrollto": "^2.20.0",
-    "vue2-transitions": "^0.2.3"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.4.0",
-    "@vue/cli-plugin-eslint": "^3.4.0",
-    "@vue/cli-plugin-pwa": "^3.4.0",
-    "@vue/cli-service": "^3.4.0",
-    "gh-pages": "^3.2.3",
-    "node-sass": "^4.11.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.6"
-  }
+    "name": "mutable-security",
+    "homepage": "https://www.mutablesecurity.ro",
+    "version": "0.2.0",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "vue-cli-service lint",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d dist"
+    },
+    "dependencies": {
+        "bootstrap-vue": "^2.0.4",
+        "flatpickr": "^4.5.1",
+        "gh-pages": "^3.2.3",
+        "nouislider": "^11.1.0",
+        "register-service-worker": "^1.5.2",
+        "vue": "^2.6.6",
+        "vue-flatpickr-component": "^8.1.1",
+        "vue-lazyload": "^1.2.6",
+        "vue-router": "^3.0.2",
+        "vue-typer": "^1.2.0",
+        "vue2-transitions": "^0.2.3"
+    },
+    "browserslist": [
+        ">0.2%",
+        "not dead",
+        "not ie <= 11",
+        "not op_mini all"
+    ],
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "^5.0.4",
+        "@vue/cli-plugin-pwa": "^5.0.4",
+        "@vue/cli-service": "^5.0.4",
+        "acorn": "^8.7.0",
+        "eslint-config-google": "^0.14.0",
+        "sass": "^1.50.0",
+        "sass-loader": "^7.1.0",
+        "vue-template-compiler": "^2.6.6"
+    },
+    "eslintConfig": {
+        "root": true,
+        "env": {
+            "node": true
+        },
+        "extends": [
+            "plugin:vue/essential",
+            "eslint:recommended"
+        ],
+        "parserOptions": {
+            "parser": "babel-eslint"
+        },
+        "rules": {}
+    }
 }
