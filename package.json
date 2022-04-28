@@ -1,6 +1,6 @@
 {
     "name": "mutable-security",
-    "homepage": "https://www.mutablesecurity.ro",
+    "homepage": "https://www.mutablesecurity.io",
     "version": "0.2.0",
     "scripts": {
         "serve": "vue-cli-service serve",

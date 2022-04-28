@@ -171,7 +171,7 @@
               Would you like support for the solutions you use everyday? Or do
               you simply want to provide feedback? Drop us a line using the form
               below or send us an email at
-              <code>hello@mutablesecurity.ro</code>!
+              <code>hello@mutablesecurity.io</code>!
             </p>
           </div>
         </div>
