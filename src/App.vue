@@ -30,7 +30,7 @@
                 />
               </h1>
               <h3 class="text-white mt-4 mb-5">
-                Seamlessly deployment and management of cybersecurity solutions
+                Seamless deployment and management of cybersecurity solutions
               </h3>
               <div class="btn-wrapper">
                 <base-button
