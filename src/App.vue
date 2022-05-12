@@ -126,7 +126,7 @@
               <div class="text-center">
                 <h4 class="display-4 mb-5 mt-5">Under Development</h4>
                 <div class="row justify-content-center">
-                  <div class="col-lg-6 col-12">
+                  <div class="col-lg-4 col-12">
                     <a
                       href="https://www.bitdefender.com/"
                       target="_blank"
@@ -139,7 +139,7 @@
                       />
                     </a>
                   </div>
-                  <div class="col-lg-6 col-12">
+                  <div class="col-lg-4 col-12">
                     <a
                       href="https://letsencrypt.org/"
                       target="_blank"
@@ -148,6 +148,19 @@
                     >
                       <img
                         v-lazy="'images/letsencrypt.png'"
+                        class="img-fluid vendor-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <a
+                      href="https://github.com/kitabisa/teler"
+                      target="_blank"
+                      data-toggle="tooltip"
+                      data-original-title="kitabisa/teler: Real-time HTTP Intrusion Detection"
+                    >
+                      <img
+                        v-lazy="'images/teler.png'"
                         class="img-fluid vendor-logo"
                       />
                     </a>
