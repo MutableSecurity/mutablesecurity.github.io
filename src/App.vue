@@ -10,12 +10,12 @@
                 $ mutablesecurity --solution <br class="d-xl-none" />
                 <vue-typer
                   :text="[
-                    'BITWARDEN --operation GET_LOGS',
+                    'WAZUH --operation GET_LOGS',
                     'SURICATA --operation INSTALL',
-                    'LETS_ENCRYPT --operation UPDATE',
-                    'BITDEFENDER --operation TEST',
-                    'WAZUH --operation GET_STATS',
-                    'ELASTIC_SEARCH --operation UNINSTALL',
+                    'WAZUH --operation UPDATE',
+                    'LETS_ENCRYPT --operation TEST',
+                    'TELER --operation GET_STATS',
+                    'OPENCTI --operation UNINSTALL',
                   ]"
                   :repeat="Infinity"
                   :shuffle="true"
@@ -108,33 +108,15 @@
               <div class="text-center">
                 <h4 class="display-4 mb-5 mt-5">Stable</h4>
                 <div class="row justify-content-center">
-                  <div class="col-lg-6 col-12">
-                    <a
-                      href="https://suricata.io/"
-                      target="_blank"
-                      data-toggle="tooltip"
-                      data-original-title="Suricata, an open source network intrusion detection and prevention system"
-                    >
-                      <img
-                        v-lazy="'images/suricata.png'"
-                        class="img-fluid vendor-logo"
-                      />
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="text-center">
-                <h4 class="display-4 mb-5 mt-5">Under Development</h4>
-                <div class="row justify-content-center">
                   <div class="col-lg-4 col-12">
                     <a
-                      href="https://www.bitdefender.com/"
+                      href="https://github.com/kitabisa/teler"
                       target="_blank"
                       data-toggle="tooltip"
-                      data-original-title="Bitdefender, a first-in-class antivirus"
+                      data-original-title="kitabisa/teler: Real-time HTTP Intrusion Detection"
                     >
                       <img
-                        v-lazy="'images/bitdefender.png'"
+                        v-lazy="'images/teler.png'"
                         class="img-fluid vendor-logo"
                       />
                     </a>
@@ -154,21 +136,78 @@
                   </div>
                   <div class="col-lg-4 col-12">
                     <a
-                      href="https://github.com/kitabisa/teler"
+                      href="https://suricata.io/"
                       target="_blank"
                       data-toggle="tooltip"
-                      data-original-title="kitabisa/teler: Real-time HTTP Intrusion Detection"
+                      data-original-title="Suricata, an open source network intrusion detection and prevention system"
                     >
                       <img
-                        v-lazy="'images/teler.png'"
+                        v-lazy="'images/suricata.png'"
                         class="img-fluid vendor-logo"
                       />
                     </a>
                   </div>
                 </div>
               </div>
+              <div class="text-center">
+                <h4 class="display-4 mb-5 mt-5">Under Development</h4>
+                <div class="row justify-content-center">
+                  <div class="col-lg-4 col-12">
+                    <a
+                      href="https://wazuh.com/"
+                      target="_blank"
+                      data-toggle="tooltip"
+                      data-original-title="Wazuh | The Open Source Security Platform"
+                    >
+                      <img
+                        v-lazy="'images/wazuh.png'"
+                        class="img-fluid vendor-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <a
+                      href="https://wazuh.com/"
+                      target="_blank"
+                      data-toggle="tooltip"
+                      data-original-title="Duplicati"
+                    >
+                      <img
+                        v-lazy="'images/duplicati.png'"
+                        class="img-fluid vendor-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <a
+                      href="https://www.opencti.io"
+                      target="_blank"
+                      data-toggle="tooltip"
+                      data-original-title="OpenCTI - Open platform for cyber threat intelligence"
+                    >
+                      <img
+                        v-lazy="'images/opencti.png'"
+                        class="img-fluid vendor-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <a
+                      href="https://www.bitdefender.com/"
+                      target="_blank"
+                      data-toggle="tooltip"
+                      data-original-title="Bitdefender, a first-in-class antivirus"
+                    >
+                      <img
+                        v-lazy="'images/bitdefender.png'"
+                        class="img-fluid vendor-logo"
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <h4 class="display-4 mb-5 mt-5">And more coming soon...</h4>
             </div>
-            <h4 class="display-4 mb-5 mt-5">And more coming soon...</h4>
           </div>
         </div>
       </div>
