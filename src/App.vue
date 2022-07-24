@@ -35,6 +35,16 @@
               <div class="btn-wrapper">
                 <base-button
                   tag="a"
+                  href="#demo-section"
+                  class="mb-3 mb-sm-0"
+                  type="white"
+                  icon="fa fa-camera"
+                  size="lg"
+                >
+                  See The Demo
+                </base-button>
+                <base-button
+                  tag="a"
                   href="#solutions-section"
                   class="mb-3 mb-sm-0"
                   type="white"
@@ -96,6 +106,28 @@
       <div class="container">
         <div class="row row-grid justify-content-center">
           <div class="col-lg-8 text-center">
+            <h2 class="display-3" id="demo-section">
+              Watch MutableSecurity in Action
+            </h2>
+            <div class="video-container">
+              <iframe
+                width="560" height="315"
+                src="https://www.youtube.com/embed/QViyKbzySWA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-lg">
+      <div class="container">
+        <div class="row row-grid justify-content-center">
+          <div class="col-lg-8 text-center">
             <h2 class="display-3" id="solutions-section">
               The Solutions We Support
             </h2>
@@ -112,8 +144,6 @@
                     <a
                       href="https://github.com/kitabisa/teler"
                       target="_blank"
-                      data-toggle="tooltip"
-                      data-original-title="kitabisa/teler: Real-time HTTP Intrusion Detection"
                     >
                       <img
                         v-lazy="'images/teler.png'"
@@ -125,8 +155,6 @@
                     <a
                       href="https://letsencrypt.org/"
                       target="_blank"
-                      data-toggle="tooltip"
-                      data-original-title="Let's Encrypt, a nonprofit Certificate Authority providing free TLS certificates"
                     >
                       <img
                         v-lazy="'images/letsencrypt.png'"
@@ -138,11 +166,20 @@
                     <a
                       href="https://suricata.io/"
                       target="_blank"
-                      data-toggle="tooltip"
-                      data-original-title="Suricata, an open source network intrusion detection and prevention system"
-                    >
+                      >
                       <img
                         v-lazy="'images/suricata.png'"
+                        class="img-fluid vendor-logo"
+                      />
+                    </a>
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <a
+                      href="https://www.fail2ban.org/"
+                      target="_blank"
+                      >
+                      <img
+                        v-lazy="'images/fail2ban.png'"
                         class="img-fluid vendor-logo"
                       />
                     </a>
@@ -167,39 +204,11 @@
                   </div>
                   <div class="col-lg-4 col-12">
                     <a
-                      href="https://wazuh.com/"
+                      href="https://www.clamav.net/"
                       target="_blank"
-                      data-toggle="tooltip"
-                      data-original-title="Duplicati"
                     >
                       <img
-                        v-lazy="'images/duplicati.png'"
-                        class="img-fluid vendor-logo"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-lg-4 col-12">
-                    <a
-                      href="https://www.opencti.io"
-                      target="_blank"
-                      data-toggle="tooltip"
-                      data-original-title="OpenCTI - Open platform for cyber threat intelligence"
-                    >
-                      <img
-                        v-lazy="'images/opencti.png'"
-                        class="img-fluid vendor-logo"
-                      />
-                    </a>
-                  </div>
-                  <div class="col-lg-4 col-12">
-                    <a
-                      href="https://www.bitdefender.com/"
-                      target="_blank"
-                      data-toggle="tooltip"
-                      data-original-title="Bitdefender, a first-in-class antivirus"
-                    >
-                      <img
-                        v-lazy="'images/bitdefender.png'"
+                        v-lazy="'images/clamav.png'"
                         class="img-fluid vendor-logo"
                       />
                     </a>
@@ -382,6 +391,21 @@ export default {
 .is-valid {
   border-style: solid !important;
   border-width: 1px !important;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin-top: 20px;
+}
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
 @media screen and (max-width: 720px) {
